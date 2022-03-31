@@ -2,14 +2,16 @@ from collections import deque
 
 
 def BFS_with_adj_list(graph, root):
-    visited = []
-    queue = deque([root])
+    visited = list()
+    queue = list()
+
+    queue.append(root)
 
     while queue:
-        n = queue.popleft()
+        n = queue.pop(0)
         if n not in visited:
             visited.append(n)
-            queue += graph[n] - set(visited)
+            queue.extend(graph[n])
     return visited
 
 
