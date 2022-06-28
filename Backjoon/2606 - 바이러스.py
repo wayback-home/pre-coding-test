@@ -17,11 +17,11 @@ for _ in range(numOfConect):
         graph[y].add(x)
 
 
-def find_graph(graph):
-    visited = list()
+def find_graph(graph, startnode):  # DFS 수정 -> 순서대로 가지 않으면 추가가 정상적으로 되지 않음
+    visited = list()  # TODO : 재귀함수로 구현할것
     visited.append(int(1))
 
-    i = 1
+    i = startnode
     while i in graph.keys():
         if i in visited:
             visited.extend(graph.get(i))
@@ -32,7 +32,13 @@ def find_graph(graph):
     setVisited = set(visited)
     visited = list(setVisited)
 
-    return len(visited) - 1
+    return visited
 
 
-print(find_graph(graph))
+numOfVisited = len(find_graph(graph, 1)) - 1
+
+
+print(graph)
+print(find_graph(graph, 1))
+
+print(numOfVisited)

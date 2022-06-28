@@ -1,8 +1,8 @@
 import sys
 from collections import deque
 
-
-def bfs(graph, root):  # * BFS 구현 함수
+# * BFS 구현 함수
+def bfs(graph, root):
     visited = list()
     queue = list()
 
