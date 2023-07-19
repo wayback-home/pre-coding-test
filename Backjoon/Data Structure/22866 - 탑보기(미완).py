@@ -1,3 +1,4 @@
+# https://velog.io/@ckstn0777/%EB%B0%B1%EC%A4%80-22866%EB%B2%88-%ED%83%91-%EB%B3%B4%EA%B8%B0
 import sys
 from collections import deque
 
